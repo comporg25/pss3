@@ -36,7 +36,7 @@ write:                          # --- Write one byte (current 'input') to stdout
 	cmp $10, input             # was the byte we just wrote a newline ('\n' = 10)?
 	je read                    # yes → read next input byte (no extra newline)
 
-newline:                        # not a newline: emit a newline after the character
+newline:                        #  write a newline after the character
 	mov $10, input             # store '\n' (10) into 'input'
 	jmp write                  # write the newline, then loop back via the check above
 
