@@ -11,6 +11,18 @@ Write an x86-64 Linux assembly program that scans an array of 64-bit integers an
 * `numberofnumbers` — 64-bit count of elements (here: `7`)
 * `mynumbers` — 7 quadwords: `5, 20, 33, 80, 52, 10, 1`
 
+* Data (put this in your program’s `.data` section)
+
+```asm
+        .section .data
+numberofnumbers:
+        .quad 7
+mynumbers:
+        .quad 5, 20, 33, 80, 52, 10, 1
+```
+
+> With this data, the largest value is **80** → expected exit status: **80**.
+
 ---
 
 ## Part A — Baseline (General Addressing Mode)
